@@ -18,6 +18,16 @@ from app.services import registration_service
 router = APIRouter()
 
 
+@router.get(
+    "/events/{event_id}/registrations",
+    response_model=list[RegistrationResponse],
+    summary="Get all registrations for an event",
+)
+def get_registrations(event_id: int, db: Session = Depends(get_db)):
+    return registration_service.get_registrations(db, event_id)
+
+
+
 @router.post(
     "/events/{event_id}/register",
     response_model=RegistrationResponse,
