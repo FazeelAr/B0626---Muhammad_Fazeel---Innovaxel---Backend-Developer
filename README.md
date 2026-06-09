@@ -2,6 +2,8 @@
 
 A REST API for creating events, managing seat capacity, and registering users — built with FastAPI + SQLite.
 
+## Link to the video: https://drive.google.com/drive/folders/1A2cnhq-h65sYN9dm69_vN7mH_z175pem?usp=drive_link
+
 ## Setup
 
 ```bash
